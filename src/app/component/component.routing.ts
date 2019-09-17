@@ -7,7 +7,6 @@ import { NgbdAlertBasicComponent } from './alert/alert.component';
 import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
 import { NgbdDatepickerBasicComponent } from './datepicker/datepicker.component';
 import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
-import { NgbdModalBasicComponent } from './modal/modal.component';
 import { NgbdPopTooltipComponent } from './popover-tooltip/popover-tooltip.component';
 import { NgbdratingBasicComponent } from './rating/rating.component';
 import { NgbdtabsBasicComponent } from './tabs/tabs.component';
@@ -113,18 +112,6 @@ export const ComponentsRoutes: Routes = [
             { title: 'Dashboard', url: '/dashboard' },
             { title: 'ngComponent' },
             { title: 'Dropdown' }
-          ]
-        }
-      },
-      {
-        path: 'modal',
-        component: NgbdModalBasicComponent,
-        data: {
-          title: 'Modal',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Modal' }
           ]
         }
       },

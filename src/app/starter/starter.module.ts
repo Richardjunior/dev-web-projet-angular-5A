@@ -9,10 +9,10 @@ const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Starter Page',
+      title: 'Les Tendances Actuelles',
       urls: [
         { title: 'Dashboard', url: '/dashboard' },
-        { title: 'Starter Page' }
+        { title: 'Accueil' }
       ]
     },
     component: StarterComponent
