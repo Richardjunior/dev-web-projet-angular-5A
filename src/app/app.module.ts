@@ -4,9 +4,11 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule} from '@angular/common/http';
-import { DataService} from './data.service';
+import { GenreComponent } from './components/genres/genre.component';
+
 @NgModule({
   declarations: [
+    GenreComponent,
     AppComponent
   ],
   imports: [
@@ -14,7 +16,6 @@ import { DataService} from './data.service';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
