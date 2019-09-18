@@ -1,37 +1,19 @@
-<div *ngFor="let starter of starters$" style="text-align:center">
-    <h2>Id du film: {{ starter.id}} </h2>
-    <p>Le titre est : {{ starter.title }}</p>
-    <p>Video dispo ? : {{ starter.overview }}</p>
-  </div>
+
   <router-outlet></router-outlet>
 <!-- Row -->
 <div class="row">
-    <div class="col-12 m-t-30">
+    <div class="col-12">
         <h2 class="m-b-0">Recents</h2>
-        <p class="text-muted m-t-0 font-12">Use card groups to render cards as a single, attached element with equal width and height columns.</p>
-        <div class="card-deck">
+        <p class="text-muted m-t-0 font-12">Discover the best movies of the moment</p>
+    </div>
+    <div class="row" style="overflow-x: hidden;overflow-y: scroll; height: 500px; white-space:normal">
+        <div class="col-sm-4" *ngFor="let starter of starters$">
             <div class="card">
-                <img class="card-img-top img-responsive" src="assets/images/big/img1.jpg" alt="Card image cap">
+                <img class="card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ starter.poster_path }}" alt="Card image cap">
                 <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top img-responsive" src="assets/images/big/img2.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This card has supporting text below as a natural.</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
-                </div>
-            </div>
-            <div class="card">
-                <img class="card-img-top img-responsive" src="assets/images/big/img3.jpg" alt="Card image cap">
-                <div class="card-body">
-                    <h4 class="card-title">Card title</h4>
-                    <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action. supporting text below as a natural lead-in to additional content</p>
-                    <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                    <h4 class="card-title">{{ starter.title }}</h4>
+                    <p class="card-text">{{ starter.overview }}</p>
+                    <p class="card-text"><small class="text-muted">Release Date {{ starter.release_date }}</small></p>
                 </div>
             </div>
         </div>
@@ -112,7 +94,7 @@
 <!-- Row -->
 <div class="row">
     <div class="col-12  m-t-30" >
-        <h2 class="d-inline">Animation</h2>
+        <h2 class="d-inline">Action</h2>
         <!-- Row -->
         <div class="row">
             <!-- column -->
@@ -181,7 +163,7 @@
 <!-- Row -->
 <div class="row">
     <div class="col-12  m-t-30" >
-        <h2 class="d-inline">Animation</h2>
+        <h2 class="d-inline">Romance</h2>
         <!-- Row -->
         <div class="row">
             <!-- column -->
