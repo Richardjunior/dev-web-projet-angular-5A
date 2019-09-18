@@ -20,62 +20,14 @@ export const ComponentsRoutes: Routes = [
     path: '',
     children: [
       {
-        path: 'progressbar',
-        component: NgbdpregressbarBasicComponent,
-        data: {
-          title: 'Progressbar',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Progressbar' }
-          ]
-        }
-      },
-      {
         path: 'cards',
         component: CardsComponent,
         data: {
           title: 'Cards',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
+            { title: 'UlriFlix', url: '/dashboard' },
             { title: 'ngComponent' },
             { title: 'Cards' }
-          ]
-        }
-      },
-      {
-        path: 'pagination',
-        component: NgbdpaginationBasicComponent,
-        data: {
-          title: 'Pagination',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Pagination' }
-          ]
-        }
-      },
-      {
-        path: 'accordion',
-        component: NgbdAccordionBasicComponent,
-        data: {
-          title: 'Accordion',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Accordion' }
-          ]
-        }
-      },
-      {
-        path: 'alert',
-        component: NgbdAlertBasicComponent,
-        data: {
-          title: 'Alert',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Alert' }
           ]
         }
       },
@@ -83,47 +35,11 @@ export const ComponentsRoutes: Routes = [
         path: 'carousel',
         component: NgbdCarouselBasicComponent,
         data: {
-          title: 'Carousel',
+          title: 'Best Movies',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Carousel' }
-          ]
-        }
-      },
-      {
-        path: 'datepicker',
-        component: NgbdDatepickerBasicComponent,
-        data: {
-          title: 'Datepicker',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Datepicker' }
-          ]
-        }
-      },
-      {
-        path: 'dropdown',
-        component: NgbdDropdownBasicComponent,
-        data: {
-          title: 'Dropdown',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Dropdown' }
-          ]
-        }
-      },
-      {
-        path: 'poptool',
-        component: NgbdPopTooltipComponent,
-        data: {
-          title: 'Popover & Tooltip',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Popover & Tooltip' }
+            { title: 'UlriFlix', url: '/dashboard' },
+            { title: 'Best Movies' },
+            { title: 'Best Movies' }
           ]
         }
       },
@@ -131,11 +47,11 @@ export const ComponentsRoutes: Routes = [
         path: 'rating',
         component: NgbdratingBasicComponent,
         data: {
-          title: 'Rating',
+          title: 'Comments',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Rating' }
+            { title: 'UlriFlix', url: '/dashboard' },
+            { title: 'Comments' },
+            { title: 'Comments' }
           ]
         }
       },
@@ -143,47 +59,11 @@ export const ComponentsRoutes: Routes = [
         path: 'tabs',
         component: NgbdtabsBasicComponent,
         data: {
-          title: 'Tabs',
+          title: 'Others',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Tabs' }
-          ]
-        }
-      },
-      {
-        path: 'timepicker',
-        component: NgbdtimepickerBasicComponent,
-        data: {
-          title: 'Timepicker',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Timepicker' }
-          ]
-        }
-      },
-      {
-        path: 'typehead',
-        component: NgbdtypeheadBasicComponent,
-        data: {
-          title: 'Typehead',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Typehead' }
-          ]
-        }
-      },
-      {
-        path: 'buttons',
-        component: ButtonsComponent,
-        data: {
-          title: 'Button',
-          urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Button' }
+            { title: 'UlriFlix', url: '/dashboard' },
+            { title: 'Others' },
+            { title: 'Others' }
           ]
         }
       }

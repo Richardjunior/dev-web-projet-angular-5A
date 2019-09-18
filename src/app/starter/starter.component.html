@@ -1,4 +1,9 @@
-
+<div *ngFor="let starter of starters$" style="text-align:center">
+    <h2>Id du film: {{ starter.id}} </h2>
+    <p>Le titre est : {{ starter.title }}</p>
+    <p>Video dispo ? : {{ starter.overview }}</p>
+  </div>
+  <router-outlet></router-outlet>
 <!-- Row -->
 <div class="row">
     <div class="col-12 m-t-30">

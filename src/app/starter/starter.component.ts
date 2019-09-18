@@ -1,13 +1,23 @@
-import { Component, AfterViewInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { StarterService } from './starter.service';
+import { Starter } from './starter.model';
 @Component({
-  templateUrl: './starter.component.html'
+  selector: 'app-starter',
+  templateUrl: './starter.component.html',
 })
-export class StarterComponent implements AfterViewInit {
+export class StarterComponent implements OnInit {
   subtitle: string;
-  constructor() {
+  starters$: Starter[];
+
+  constructor( private starterService: StarterService) {
     this.subtitle = 'This is some text within a card block.';
   }
 
-  ngAfterViewInit() {}
+
+  ngOnInit() {
+    return this.starterService.getTrendings().subscribe(data => {
+        this.starters$ = data.results;
+    });
+  }
 }
 
