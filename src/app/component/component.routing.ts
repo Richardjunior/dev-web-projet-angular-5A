@@ -1,18 +1,9 @@
 import { Routes } from '@angular/router';
 
-import { NgbdpregressbarBasicComponent } from './progressbar/progressbar.component';
-import { NgbdpaginationBasicComponent } from './pagination/pagination.component';
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
-import { NgbdAlertBasicComponent } from './alert/alert.component';
 import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
-import { NgbdDatepickerBasicComponent } from './datepicker/datepicker.component';
-import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
-import { NgbdPopTooltipComponent } from './popover-tooltip/popover-tooltip.component';
 import { NgbdratingBasicComponent } from './rating/rating.component';
-import { NgbdtabsBasicComponent } from './tabs/tabs.component';
-import { NgbdtimepickerBasicComponent } from './timepicker/timepicker.component';
-import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
-import { ButtonsComponent } from './buttons/buttons.component';
+import { DescribeComponent } from './describe/describe.component';
 import { CardsComponent } from './card/card.component';
 
 export const ComponentsRoutes: Routes = [
@@ -56,14 +47,14 @@ export const ComponentsRoutes: Routes = [
         }
       },
       {
-        path: 'tabs',
-        component: NgbdtabsBasicComponent,
+        path: 'describe/:id',
+        component: DescribeComponent,
         data: {
-          title: 'Others',
+          title: 'Describe Movie',
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
-            { title: 'Others' },
-            { title: 'Others' }
+            { title: 'Describe Movie' },
+            { title: 'Describe Movie' }
           ]
         }
       }

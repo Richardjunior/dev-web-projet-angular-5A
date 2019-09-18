@@ -10,11 +10,12 @@ export interface  Starter {
     backdrop_path: string;
     adult: boolean;
     overview: string;
+    genre_ids: Array<number>;
 }
 
 export interface StarterResponse {
    // page: number;
     results: Array<Starter>;
-    //total_pages: number;
+    // total_pages: number;
    // total_results: number;
 }

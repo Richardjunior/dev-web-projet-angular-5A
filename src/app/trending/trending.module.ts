@@ -4,7 +4,6 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { StarterComponent } from './starter.component';
-import { TrendingComponent } from '../component/trending/trending.component';
 
 const routes: Routes = [
   {

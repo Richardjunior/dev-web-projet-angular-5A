@@ -6,21 +6,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ComponentsRoutes } from './component.routing';
-import { NgbdpregressbarBasicComponent } from './progressbar/progressbar.component';
-import { NgbdpaginationBasicComponent } from './pagination/pagination.component';
+
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
-import { NgbdAlertBasicComponent } from './alert/alert.component';
 import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
-import { NgbdDatepickerBasicComponent } from './datepicker/datepicker.component';
-import { NgbdDropdownBasicComponent } from './dropdown-collapse/dropdown-collapse.component';
-import { NgbdPopTooltipComponent } from './popover-tooltip/popover-tooltip.component';
+
 import { NgbdratingBasicComponent } from './rating/rating.component';
-import { NgbdtabsBasicComponent } from './tabs/tabs.component';
-import { NgbdtimepickerBasicComponent } from './timepicker/timepicker.component';
-import { NgbdtypeheadBasicComponent } from './typehead/typehead.component';
-import { ButtonsComponent } from './buttons/buttons.component';
+import { DescribeComponent } from './describe/describe.component';
+
 import { CardsComponent } from './card/card.component';
-import { TrendingComponent } from './trending/trending.component';
 
 @NgModule({
   imports: [
@@ -31,21 +24,11 @@ import { TrendingComponent } from './trending/trending.component';
     NgbModule
   ],
   declarations: [
-    NgbdpregressbarBasicComponent,
-    NgbdpaginationBasicComponent,
     NgbdAccordionBasicComponent,
-    NgbdAlertBasicComponent,
     NgbdCarouselBasicComponent,
-    NgbdDatepickerBasicComponent,
-    NgbdDropdownBasicComponent,
-    NgbdPopTooltipComponent,
     NgbdratingBasicComponent,
-    NgbdtabsBasicComponent,
-    NgbdtimepickerBasicComponent,
-    NgbdtypeheadBasicComponent,
-    ButtonsComponent,
+    DescribeComponent,
     CardsComponent,
-    TrendingComponent
   ]
 })
 export class ComponentsModule {}
