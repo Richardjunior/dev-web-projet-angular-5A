@@ -4,15 +4,16 @@ import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
 import { StarterComponent } from './starter.component';
+import { TrendingComponent } from '../component/trending/trending.component';
 
 const routes: Routes = [
   {
     path: '',
     data: {
-      title: 'Starter Page',
+      title: 'Les Tendances Actuelles',
       urls: [
-        { title: 'Dashboard', url: '/dashboard' },
-        { title: 'Starter Page' }
+        { title: 'UlriFlix', url: '/dashboard' },
+        { title: 'Home' }
       ]
     },
     component: StarterComponent
@@ -21,6 +22,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
-  declarations: [StarterComponent]
+  declarations: [StarterComponent,
+  StarterComponent]
 })
 export class StarterModule {}
