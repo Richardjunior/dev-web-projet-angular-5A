@@ -36,11 +36,9 @@ export const ComponentsRoutes: Routes = [
         path: 'cards',
         component: CardsComponent,
         data: {
-          title: 'Cards',
+          title: 'Accueil',
           urls: [
-            { title: 'Dashboard', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Cards' }
+                { title: 'Acceuil' }
           ]
         }
       },

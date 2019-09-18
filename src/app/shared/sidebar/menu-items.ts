@@ -2,13 +2,13 @@ import { RouteInfo } from './sidebar.metadata';
 
 export const ROUTES: RouteInfo[] = [
   {
-    path: '',
-    title: 'Personal',
-    icon: '',
-    class: 'nav-small-cap',
+    path: '/component/cards',
+    title: 'Accueil',
+    icon: 'mdi mdi-blur-radial',
+    class: '',
     label: '',
     labelClass: '',
-    extralink: true,
+    extralink: false,
     submenu: []
   },
   {
@@ -22,7 +22,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '',
+    path: '/starter',
     title: 'UI Components',
     icon: '',
     class: 'nav-small-cap',
@@ -32,49 +32,9 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/accordion',
-    title: 'Accordion',
-    icon: 'mdi mdi-equal',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/alert',
-    title: 'Alert',
-    icon: 'mdi mdi-message-bulleted',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
     path: '/component/carousel',
     title: 'Carousel',
     icon: 'mdi mdi-view-carousel',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/dropdown',
-    title: 'Dropdown',
-    icon: 'mdi mdi-arrange-bring-to-front',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/modal',
-    title: 'Modal',
-    icon: 'mdi mdi-tablet',
     class: '',
     label: '',
     labelClass: '',
@@ -101,16 +61,7 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
-    path: '/component/progressbar',
-    title: 'Progressbar',
-    icon: 'mdi mdi-poll',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
+
   {
     path: '/component/rating',
     title: 'Ratings',
@@ -132,29 +83,9 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
   {
-    path: '/component/timepicker',
-    title: 'Timepicker',
-    icon: 'mdi mdi-calendar-clock',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
     path: '/component/buttons',
     title: 'Button',
     icon: 'mdi mdi-toggle-switch',
-    class: '',
-    label: '',
-    labelClass: '',
-    extralink: false,
-    submenu: []
-  },
-  {
-    path: '/component/cards',
-    title: 'Card',
-    icon: 'mdi mdi-blur-radial',
     class: '',
     label: '',
     labelClass: '',
