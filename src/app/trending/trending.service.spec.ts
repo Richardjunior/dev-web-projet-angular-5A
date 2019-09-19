@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { StarterService } from './starter.service';
+import { StarterService } from './trending.service';
 
 describe('StarterService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
