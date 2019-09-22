@@ -12,7 +12,7 @@ export const Approutes: Routes = [
       { path: '', redirectTo: '/starter', pathMatch: 'full' },
       {
         path: 'starter',
-        loadChildren: () => import('./trending/trending.module').then(m => m.StarterModule)
+        loadChildren: () => import('./component/trending/trending.module').then(m => m.StarterModule)
       },
       {
         path: 'component',

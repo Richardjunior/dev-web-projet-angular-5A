@@ -3,6 +3,7 @@ import { NgbTabChangeEvent } from '@ng-bootstrap/ng-bootstrap';
 import { ActivatedRoute } from '@angular/router';
 import { DescribeService } from './describe.service';
 import { map } from 'rxjs/operators';
+import { Describe, Movie } from './describe.model';
 
 @Component({
   selector: 'app-ngbd-tabs',
@@ -11,7 +12,12 @@ import { map } from 'rxjs/operators';
 export class DescribeComponent implements OnInit {
   currentJustify = 'start';
   movieId: number;
-  constructor(private route: ActivatedRoute , describeService: DescribeService) {}
+  describeMovie$: Describe;
+  MovieVideo$: Movie[];
+  keyMovie: string;
+  id: number;
+  youtubeUrl: string;
+  constructor(private route: ActivatedRoute , private describeService: DescribeService) {}
 
   currentOrientation = 'horizontal';
   public beforeChange($event: NgbTabChangeEvent) {
@@ -26,6 +32,20 @@ export class DescribeComponent implements OnInit {
           this.movieId = parseInt(params.get('id'), 10);
         })
     ).subscribe();
-  }
+        this.describeService.getDescribeMovie(this.movieId).subscribe(
+          data => {
+              this.describeMovie$ =  data;
+          }
+        );
+   }
+
+   youtubebMovie() {
+    this.describeService.getVideoOfMovie(this.movieId).subscribe(
+      data => {
+          this.MovieVideo$ =  data.results;
+          this.keyMovie = data.results[0].key;
+      }
+    );
+   }
 
 }

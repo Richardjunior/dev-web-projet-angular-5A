@@ -1,4 +1,4 @@
-export interface  Starter {
+export interface  Trending {
     id: number;
     video: boolean;
     vote_count: number;
@@ -13,9 +13,9 @@ export interface  Starter {
     genre_ids: Array<number>;
 }
 
-export interface StarterResponse {
+export interface TrendingResponse {
    // page: number;
-    results: Array<Starter>;
+    results: Array<Trending>;
     // total_pages: number;
    // total_results: number;
 }

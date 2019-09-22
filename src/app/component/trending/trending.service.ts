@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpBackend, HttpClient } from '@angular/common/http';
-import { StarterResponse, Starter } from './trending.model';
+import { TrendingResponse, Trending } from './trending.model';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -11,7 +11,11 @@ export class TrendingService {
 
   constructor( private _http: HttpClient) { }
 
-  getTrendings(): Observable<StarterResponse> {
-    return this._http.get<StarterResponse>(this.apiUrlAllTrending);
+  getTrendings(): Observable<TrendingResponse> {
+    return this._http.get<TrendingResponse>(this.apiUrlAllTrending);
+  }
+
+  getTrendingsByGenre(id: number): Observable<TrendingResponse> {
+    return this._http.get<TrendingResponse>(this.apiUrlAllTrending);
   }
 }
