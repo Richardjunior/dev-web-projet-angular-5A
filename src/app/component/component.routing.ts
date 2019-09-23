@@ -1,7 +1,7 @@
 import { Routes } from '@angular/router';
 
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
-import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
+import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 import { NgbdratingBasicComponent } from './rating/rating.component';
 import { DescribeComponent } from './describe/describe.component';
 import { CardsComponent } from './card/card.component';
@@ -24,7 +24,7 @@ export const ComponentsRoutes: Routes = [
       },
       {
         path: 'carousel',
-        component: NgbdCarouselBasicComponent,
+        component: BestMovieBasicComponent,
         data: {
           title: 'Best Movies',
           urls: [

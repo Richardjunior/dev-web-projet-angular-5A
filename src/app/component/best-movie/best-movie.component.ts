@@ -5,10 +5,10 @@ import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-ngbd-buttons-radio',
-  templateUrl: './carousel.component.html',
+  templateUrl: './best-movie.component.html',
   providers: [NgbCarouselConfig]
 })
-export class NgbdCarouselBasicComponent {
+export class BestMovieBasicComponent {
   showNavigationArrows = false;
   showNavigationIndicators = false;
 
