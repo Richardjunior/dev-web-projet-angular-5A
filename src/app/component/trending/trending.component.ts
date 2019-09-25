@@ -11,6 +11,8 @@ export class StarterComponent implements OnInit {
   trendings$: Trending[];
   trendingByGenres$: Trending[];
   trendingActions$: Trending[];
+  searchTerm: string;
+  
   constructor( private trendingService: TrendingService) {
     this.subtitle = 'This is some text within a card block.';
   }

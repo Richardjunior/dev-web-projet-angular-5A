@@ -21,7 +21,7 @@ import { CardsComponent } from './card/card.component';
     RouterModule.forChild(ComponentsRoutes),
     FormsModule,
     ReactiveFormsModule,
-    NgbModule
+    NgbModule,
   ],
   declarations: [
     NgbdAccordionBasicComponent,
