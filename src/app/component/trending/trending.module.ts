@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
+
+import { FilmFilterPipe } from '../film-filter.pipe';
 import { TrendingComponent } from './trending.component';
 
 const routes: Routes = [
@@ -20,6 +22,18 @@ const routes: Routes = [
 ];
 
 @NgModule({
+  imports: [
+    FormsModule,
+    CommonModule,
+    RouterModule.forChild(routes),
+  ],
+  declarations: [
+    StarterComponent,
+    FilmFilterPipe
+    ],
+    exports: [
+      FilmFilterPipe,
+    ]
   imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
   declarations: [TrendingComponent,
     TrendingComponent]
