@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Routes, RouterModule } from '@angular/router';
 
-import { StarterComponent } from './trending.component';
+import { TrendingComponent } from './trending.component';
 
 const routes: Routes = [
   {
@@ -15,13 +15,13 @@ const routes: Routes = [
         { title: 'Home' }
       ]
     },
-    component: StarterComponent
+    component: TrendingComponent
   }
 ];
 
 @NgModule({
   imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
-  declarations: [StarterComponent,
-  StarterComponent]
+  declarations: [TrendingComponent,
+    TrendingComponent]
 })
-export class StarterModule {}
+export class TrendingModule {}

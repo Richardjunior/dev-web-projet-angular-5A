@@ -6,7 +6,7 @@ import { Trending } from './trending.model';
   selector: 'app-starter',
   templateUrl: './trending.component.html',
 })
-export class StarterComponent implements OnInit {
+export class TrendingComponent implements OnInit {
   subtitle: string;
   trendings$: Trending[];
   trendingByGenres$: Trending[];

@@ -35,17 +35,20 @@ export class DescribeComponent implements OnInit {
         this.describeService.getDescribeMovie(this.movieId).subscribe(
           data => {
               this.describeMovie$ =  data;
+              this.youtubeUrl = "https://www.youtube.com/embed/DYYtuKyMtY8";
+              console.log(this.youtubeUrl);
+          }
+        );
+        this.describeService.getVideoOfMovie(this.movieId).subscribe(
+          data => {
+              this.MovieVideo$ =  data.results;
+              this.keyMovie = data.results[0].key;
           }
         );
    }
 
    youtubebMovie() {
-    this.describeService.getVideoOfMovie(this.movieId).subscribe(
-      data => {
-          this.MovieVideo$ =  data.results;
-          this.keyMovie = data.results[0].key;
-      }
-    );
+    
    }
 
 }

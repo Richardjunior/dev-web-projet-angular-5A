@@ -9,10 +9,10 @@ export const Approutes: Routes = [
     path: '',
     component: FullComponent,
     children: [
-      { path: '', redirectTo: '/starter', pathMatch: 'full' },
+      { path: '', redirectTo: '/accueil', pathMatch: 'full' },
       {
-        path: 'starter',
-        loadChildren: () => import('./component/trending/trending.module').then(m => m.StarterModule)
+        path: 'accueil',
+        loadChildren: () => import('./component/trending/trending.module').then(m => m.TrendingModule)
       },
       {
         path: 'component',
@@ -22,6 +22,6 @@ export const Approutes: Routes = [
   },
   {
     path: '**',
-    redirectTo: '/starter'
+    redirectTo: '/accueil'
   }
 ];

@@ -7,6 +7,5 @@ import { Observable, from } from 'rxjs';
 })
 export class BestMovieService {
 
-  constructor( private _http:HttpClient) { }
-  
+  constructor( private _http: HttpClient) { }
 }
