@@ -23,7 +23,7 @@ export const ComponentsRoutes: Routes = [
         }
       },
       {
-        path: 'carousel',
+        path: 'best-movie',
         component: BestMovieBasicComponent,
         data: {
           title: 'Best Movies',

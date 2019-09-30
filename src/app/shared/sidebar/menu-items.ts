@@ -12,7 +12,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },*/
   {
-    path: '/starter',
+    path: '/accueil',
     title: 'Home',
     icon: 'mdi mdi-gauge',
     class: '',
@@ -33,7 +33,7 @@ export const ROUTES: RouteInfo[] = [
   },*/
 
   {
-    path: '/component/carousel',
+    path: '/component/best-movie',
     title: 'Best Movies',
     icon: 'mdi mdi-view-carousel',
     class: '',

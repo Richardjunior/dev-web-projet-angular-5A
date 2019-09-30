@@ -1,18 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs/operators';
+import { BestMovie } from './best-movie.module';
+import { BestMovieService } from './best-movie.service';
 
 @Component({
   selector: 'app-ngbd-buttons-radio',
   templateUrl: './best-movie.component.html',
   providers: [NgbCarouselConfig]
 })
-export class BestMovieBasicComponent {
+export class BestMovieBasicComponent implements OnInit{
+
   showNavigationArrows = false;
   showNavigationIndicators = false;
-
-  constructor(config: NgbCarouselConfig) {
+  tmpBestMovie$: BestMovie[];
+  BestMovie$: BestMovie[];
+ 
+  constructor(config: NgbCarouselConfig, private BestMovieService: BestMovieService) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.wrap = false;
@@ -20,5 +25,13 @@ export class BestMovieBasicComponent {
 
     config.showNavigationArrows = true;
     config.showNavigationIndicators = true;
+   }
+
+  ngOnInit() {
+    return this.BestMovieService.getBestMovie().subscribe(data => {
+        this.tmpBestMovie$ = data.results;
+        this.BestMovie$=this.tmpBestMovie$;
+    });
+    
   }
 }

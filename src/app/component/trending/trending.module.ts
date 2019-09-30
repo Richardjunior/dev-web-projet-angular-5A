@@ -28,14 +28,11 @@ const routes: Routes = [
     RouterModule.forChild(routes),
   ],
   declarations: [
-    StarterComponent,
+    TrendingComponent,
     FilmFilterPipe
     ],
     exports: [
       FilmFilterPipe,
     ]
-  imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
-  declarations: [TrendingComponent,
-    TrendingComponent]
 })
 export class TrendingModule {}

@@ -1,13 +1,17 @@
+<router-outlet></router-outlet> 
+  <div class="form-group"> 
+    <input type="text" class="form-control" placeholder="Search By Name" 
+            style="width:300px" [(ngModel)]="searchTerm" /> 
+</div> 
 
-  <router-outlet></router-outlet>
 <!-- Row -->
 <div class="row">
     <div class="col-12">
         <h2 class="m-b-0">Recents</h2>
         <p class="text-muted m-t-0 font-12">Discover the best movies of the moment</p>
     </div>
-    <div class="row" style="overflow-x: hidden;overflow-y: scroll; height: 500px; white-space:normal">
-        <div class="col-sm-4" *ngFor="let trending of trendings$  | filmFilter:searchTerm" >
+    <div class="row" style="overflow-x: hidden;overflow-y: scroll; white-space:normal">
+        <div class="col-sm-4" *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
             <div class="card" routerLink = "/component/describe/{{ trending.id }}">
                 <img style="height: 600px; width:auto;" class="card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ trending.poster_path }}" alt="Card image cap">
                 <div class="card-body">
