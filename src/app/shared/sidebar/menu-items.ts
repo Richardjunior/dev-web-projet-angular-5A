@@ -53,7 +53,7 @@ export const ROUTES: RouteInfo[] = [
     extralink: false,
     submenu: []
   },
-  {
+ /* {
     path: '/component/tabs',
     title: 'Others',
     icon: 'mdi mdi-sort-variant',
@@ -62,9 +62,9 @@ export const ROUTES: RouteInfo[] = [
     labelClass: '',
     extralink: false,
     submenu: []
-  },
+  },*/
 
-   /*{
+   {
     path: '/component/cards',
     title: 'Card',
     icon: 'mdi mdi-blur-radial',
@@ -75,7 +75,7 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   }
 
-   {
+  /* {
     path: '/component/accordion',
     title: 'Accordion',
     icon: 'mdi mdi-equal',

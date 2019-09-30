@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 import { map } from 'rxjs/operators';
 import { BestMovie } from './best-movie.module';
 import { BestMovieService } from './best-movie.service';
@@ -10,14 +11,15 @@ import { BestMovieService } from './best-movie.service';
   templateUrl: './best-movie.component.html',
   providers: [NgbCarouselConfig]
 })
-export class BestMovieBasicComponent implements OnInit{
+export class BestMovieBasicComponent implements OnInit {
 
   showNavigationArrows = false;
   showNavigationIndicators = false;
-  tmpBestMovie$: BestMovie[];
+  tmpBestMovie$: Array<BestMovie> = new Array<BestMovie>();
   BestMovie$: BestMovie[];
- 
-  constructor(config: NgbCarouselConfig, private BestMovieService: BestMovieService) {
+  movieId: number;
+
+  constructor(private route: ActivatedRoute ,config: NgbCarouselConfig, private BestMovieService: BestMovieService) {
     // customize default values of carousels used by this component tree
     config.interval = 10000;
     config.wrap = false;
@@ -28,10 +30,27 @@ export class BestMovieBasicComponent implements OnInit{
    }
 
   ngOnInit() {
-    return this.BestMovieService.getBestMovie().subscribe(data => {
-        this.tmpBestMovie$ = data.results;
-        this.BestMovie$=this.tmpBestMovie$;
-    });
-    
+    this.getIdMovie();
+    this.getBestMovies();
+    this.getBestMovies();
   }
+
+getBestMovies() {
+  return this.BestMovieService.getBestMovie().subscribe(data => {
+    for ( let i = 0 ; i < data.results.length; i++) {
+      if (data.results[i].vote_count > 2000) {
+       this.tmpBestMovie$.push(data.results[i]);
+      }
+  }
+      this.BestMovie$ = this.tmpBestMovie$;
+  });
+}
+
+getIdMovie() {
+  this.route.paramMap.pipe(
+    map(params => {
+        this.movieId = parseInt(params.get('id'), 10);
+      })
+  ).subscribe();
+}
 }

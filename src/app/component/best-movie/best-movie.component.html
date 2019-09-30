@@ -1,66 +1,21 @@
 
 <div class="row">
-	<div class="col-md-6 col-xlg-5" >
-		<div class="card">
-			<div class="card-body"  >
-				<h3 class="card-title">{{BestMovie$[0].title}}</h3>
-				<h6 class="card-subtitle">{{BestMovie$[0].overview}}</h6>
+	<div class="col-md-6 col-xlg-5" *ngFor="let bestmovie of BestMovie$" >
+		<div class="card" >
+			<div class="card-body" routerLink = "/component/describe/{{ bestmovie.id }}" >
+				<h3 class="card-title">{{bestmovie.title}}</h3>
+				<h6 class="card-subtitle">{{bestmovie.overview}}</h6>
 				<ngb-carousel >
 					<ng-template ngbSlide>
-						<img src="https://image.tmdb.org/t/p/w500/{{ BestMovie$[0].poster_path }}" alt="Random first slide">
+						<img src="https://image.tmdb.org/t/p/w500/{{ bestmovie.poster_path }}" alt="Random first slide">
 						<div class="carousel-caption">
-							<h3 class="text-white font-bold">{{BestMovie$[0].title}}</h3>
-							<p>{{BestMovie$[0].title}}</p>
-						</div>
-					</ng-template>
-					<ng-template ngbSlide>
-						<img src="https://image.tmdb.org/t/p/w500/{{ BestMovie$[0].poster_path }}" alt="Random second slide">
-						<div class="carousel-caption">
-							<h3 class="text-white font-bold">Second slide label</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-						</div>
-					</ng-template>
-					<ng-template ngbSlide>
-						<img src="https://image.tmdb.org/t/p/w500/{{ BestMovie$[0].poster_path }}" alt="Random third slide">
-						<div class="carousel-caption">
-							<h3 class="text-white font-bold">Third slide label</h3>
-							<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+							<h3 class="text-white font-bold">{{bestmovie.title}}</h3>
 						</div>
 					</ng-template>
 				</ngb-carousel>
 			</div>
 		</div>
 	</div>
-	<div class="col-md-6 col-xlg-5" >
-			<div class="card">
-				<div class="card-body"  >
-					<h3 class="card-title">{{BestMovie$[0].overview}}</h3>
-					<h6 class="card-subtitle">This is basic Carousel</h6>
-					<ngb-carousel >
-						<ng-template ngbSlide>
-							<img src="assets/images/big/img1.jpg" alt="Random first slide">
-							<div class="carousel-caption">
-								<h3 class="text-white font-bold">First slide label</h3>
-								<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-							</div>
-						</ng-template>
-						<ng-template ngbSlide>
-							<img src="assets/images/big/img2.jpg" alt="Random second slide">
-							<div class="carousel-caption">
-								<h3 class="text-white font-bold">Second slide label</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-							</div>
-						</ng-template>
-						<ng-template ngbSlide>
-							<img src="assets/images/big/img3.jpg" alt="Random third slide">
-							<div class="carousel-caption">
-								<h3 class="text-white font-bold">Third slide label</h3>
-								<p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-							</div>
-						</ng-template>
-					</ngb-carousel>
-				</div>
-			</div>
-		</div>
+	
 	
 </div>

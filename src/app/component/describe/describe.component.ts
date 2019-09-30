@@ -4,6 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { DescribeService } from './describe.service';
 import { map } from 'rxjs/operators';
 import { Describe, Movie } from './describe.model';
+import { SafeResourceUrl, DomSanitizer } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-ngbd-tabs',
@@ -17,7 +18,8 @@ export class DescribeComponent implements OnInit {
   keyMovie: string;
   id: number;
   youtubeUrl: string;
-  constructor(private route: ActivatedRoute , private describeService: DescribeService) {}
+  url: SafeResourceUrl;
+  constructor(private route: ActivatedRoute , private describeService: DescribeService , private sanitizer:DomSanitizer) {}
 
   currentOrientation = 'horizontal';
   public beforeChange($event: NgbTabChangeEvent) {
@@ -26,29 +28,37 @@ export class DescribeComponent implements OnInit {
     }
   }
 
+
   ngOnInit() {
+        this.getIdMovie();
+        this.getVideoOfMovie();
+        this.getDescribeMovie();
+   }
+
+   getDescribeMovie() {
+    this.describeService.getDescribeMovie(this.movieId).subscribe(
+      data => {
+          this.describeMovie$ =  data;
+      }
+    );
+   }
+ getVideoOfMovie() {
+  this.describeService.getVideoOfMovie(this.movieId).subscribe(
+    data => {
+        this.MovieVideo$ =  data.results;
+        this.keyMovie = data.results[0].key;
+        this.youtubeUrl = 'https://www.youtube.com/watch?v=' + this.keyMovie;
+        this.youtubeUrl = this.youtubeUrl.replace("watch?v=" , "embed/");
+     this.url = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtubeUrl);
+     console.log(this.youtubeUrl);
+    }
+  );
+ }
+  getIdMovie() {
     this.route.paramMap.pipe(
       map(params => {
           this.movieId = parseInt(params.get('id'), 10);
         })
     ).subscribe();
-        this.describeService.getDescribeMovie(this.movieId).subscribe(
-          data => {
-              this.describeMovie$ =  data;
-              this.youtubeUrl = "https://www.youtube.com/embed/DYYtuKyMtY8";
-              console.log(this.youtubeUrl);
-          }
-        );
-        this.describeService.getVideoOfMovie(this.movieId).subscribe(
-          data => {
-              this.MovieVideo$ =  data.results;
-              this.keyMovie = data.results[0].key;
-          }
-        );
-   }
-
-   youtubebMovie() {
-    
-   }
-
+  }
 }
