@@ -38,7 +38,7 @@ export class BestMovieBasicComponent implements OnInit {
 getBestMovies() {
   return this.BestMovieService.getBestMovie().subscribe(data => {
     for ( let i = 0 ; i < data.results.length; i++) {
-      if (data.results[i].vote_count > 2000) {
+      if (data.results[i].vote_count > 3500) {
        this.tmpBestMovie$.push(data.results[i]);
       }
   }
