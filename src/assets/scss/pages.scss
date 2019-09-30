@@ -331,6 +331,8 @@ File: scss
 
 .card {
   margin-bottom: 30px;
+  height: 700px;
+ 
   .card-subtitle {
     font-weight: 300;
     margin-bottom: 15px;
@@ -338,11 +340,15 @@ File: scss
   }
 }
 
+.test1 {height: 70%;}
+.test2 {height: 30%;}
+
 .card-inverse .card-bodyquote .blockquote-footer,
 .card-inverse .card-link,
 .card-inverse .card-subtitle,
 .card-inverse .card-text {
   color: rgba(255, 255, 255, .65);
+  
 }
 html body .card{
 &.card-success {
