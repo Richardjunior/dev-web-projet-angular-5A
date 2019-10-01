@@ -7,7 +7,10 @@ File: scss
 
 @import 'variable';
 
-
+html 
+{
+  background-color:#0E0F11;
+}
 /*============================================================== 
  For all pages 
  ============================================================== */
@@ -333,17 +336,18 @@ File: scss
 
 .card {
   margin-bottom: 30px;
-  height: 500px;
+  height: 450px;
  
   .card-subtitle {
     font-weight: 300;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
     color: $muted;
   }
 }
 
-.test1 {height: 70%;}
-.test2 {height: 30%;background-color: rgba(0, 0, 0, 0.9)}
+.test1 {height: 80%;}
+.test2 {height: 20%;background-color: rgba(0, 0, 0, 0.9);
+  flex: 1 1 auto;}
 .test3 {padding:3px !important; }
 
 .card-inverse .card-bodyquote .blockquote-footer,
