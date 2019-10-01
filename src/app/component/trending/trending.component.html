@@ -9,22 +9,14 @@
 
 <!-- Row -->
 <div class="row">
-    <div class="col-12">
-        <h2 class="m-b-0">Recents</h2>
-        <p class="text-muted m-t-0 font-12">Discover the best movies of the moment</p>
-    </div>
-    <div class="row" >
-        <div class="col-sm-2 test3" *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
-            <div  class="card" routerLink = "/component/describe/{{ trending.id }}">
+    
+        <div class="col-sm-2 test3"   *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
+            <div  class="card"  routerLink = "/component/describe/{{ trending.id }}">
                 <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ trending.poster_path }}" alt="Card image cap">
-                <div class="test2 card-body">
-                     <div style="height:10%;"> <h4 style="font-size: 10px;overflow: hidden;text-overflow:'';" >{{ trending.title }}</h4></div>
-                     <div style="height:60%;"></div>
-                     <div style="height:30%;"><p style="overflow: hidden;text-overflow:'';font-size: 10px;" ><small class="text-muted">Release Date {{ trending.release_date }}</small></p></div> 
-                </div>
+               
             </div>
         </div>
-    </div>
+   
 </div>
 <!-- End Row -->
 
