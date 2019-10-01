@@ -17,7 +17,8 @@ Main sidebar
     top: 0px;
     z-index: 20;
     padding-top: 70px;
-    background: $sidebar;
+
+    background-color:  rgba(0, 0, 0)!important;
     box-shadow: 1px 0px 20px rgba(0, 0, 0, 0.08);
 }
 
@@ -51,6 +52,7 @@ sidebar navigation
 .scroll-sidebar {
     height: calc(100vh - 70px);
     position: relative;
+   
     &.ps .ps__rail-y {
         left: 2px;
         right: auto;
@@ -70,7 +72,7 @@ sidebar navigation
         font-weight: 500;
     }
 .sidebar-nav {
-    
+
     padding: 15px 0 0 0px;
     ul {
         margin: 0px;

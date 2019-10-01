@@ -54,10 +54,12 @@ File: scss
   .top-navbar {
     min-height: 50px;
     padding: 0px 15px 0 0;
+    background-color: #0E0F11 !important;
     .dropdown-toggle::after {
       display: none;
     }
     .navbar-header {
+      background-color:#000;
       line-height: 45px;
       padding-left: 10px;
       .navbar-brand {
@@ -316,7 +318,7 @@ File: scss
   bottom: 0;
   color: $bodytext;
   left: 0px;
-  padding: 17px 15px;
+  padding: 10px 1px;
   position: absolute;
   right: 0;
   border-top: 1px solid $border;
@@ -331,7 +333,7 @@ File: scss
 
 .card {
   margin-bottom: 30px;
-  height: 700px;
+  height: 500px;
  
   .card-subtitle {
     font-weight: 300;
@@ -341,7 +343,8 @@ File: scss
 }
 
 .test1 {height: 70%;}
-.test2 {height: 30%;}
+.test2 {height: 30%;background-color: rgba(0, 0, 0, 0.9)}
+.test3 {padding:3px !important; }
 
 .card-inverse .card-bodyquote .blockquote-footer,
 .card-inverse .card-link,
