@@ -2,10 +2,14 @@
 <!-- Bread crumb and right sidebar toggle -->
 <!-- ============================================================== -->
 <div class="row page-titles">
-    <div class="col-md-5 align-self-center">
-        <h4 class="text-themecolor m-b-0">{{pageInfo?.title}}</h4>
+    <div class="col-md-4 align-self-center">
+        <h4 class=" title-page m-b-0">{{pageInfo?.title}}</h4>
     </div>
-    <div class="col-md-7 align-self-center">
+    <div class="col-md-4 align-self-center">
+        <input type="text" class="form-search" placeholder="Search By Name" 
+                style="width:90%" [(ngModel)]="searchTerm" /> 
+    </div>
+    <div class="col-md-4 align-self-center">
         <ol class="breadcrumb">
             <ng-template ngFor let-url [ngForOf]="pageInfo?.urls" let-last="last">
                 <li class="breadcrumb-item" *ngIf="!last" [routerLink]="url.url">
