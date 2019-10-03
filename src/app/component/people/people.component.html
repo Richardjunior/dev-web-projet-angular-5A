@@ -1,0 +1,25 @@
+<div class="row">
+   
+    <div class="col-md-4"  *ngFor="let people of peoples$ " >
+        <div class="card">
+            <div class="card-body" >
+                <h3 class="card-title">{{people.name}}</h3>
+                <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ people.profile_path }}" alt="Card image cap">
+                <ng-template #t let-fill="fill">
+                  <span *ngIf="fill === 100" class="heart full">&hearts;</span>
+                  <span *ngIf="fill === 0" class="heart">&hearts;</span>
+                  <span *ngIf="fill < 100 && fill > 0" class="heart">
+                    <span class="half" [style.width.%]="fill">&hearts;</span>&hearts;
+                  </span>
+                </ng-template>
+
+                <ngb-rating [(rate)]="people.popularity" [starTemplate]="t" [readonly]="true" max="5"></ngb-rating>
+                <div>Rate: <b>{{people.popularity/5}}</b></div>
+                <button class="btn btn-sm btn-outline-primary" (click)="currentRate2 = 1.50">1.50</button>
+                <button class="btn btn-sm btn-outline-primary" (click)="currentRate2 = 4.72">4.72</button>
+				
+  			</div>
+        </div>
+    </div>
+    
+</div>

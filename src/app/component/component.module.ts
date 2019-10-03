@@ -10,10 +10,10 @@ import { ComponentsRoutes } from './component.routing';
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 
-import { NgbdratingBasicComponent } from './rating/rating.component';
 import { DescribeComponent } from './describe/describe.component';
 
 import { CardsComponent } from './card/card.component';
+import { NgbdpeopleBasicComponent } from './people/people.component';
 
 @NgModule({
   imports: [
@@ -26,9 +26,10 @@ import { CardsComponent } from './card/card.component';
   declarations: [
     NgbdAccordionBasicComponent,
     BestMovieBasicComponent,
-    NgbdratingBasicComponent,
+    NgbdpeopleBasicComponent,
     DescribeComponent,
-    CardsComponent,
+    CardsComponent
+
   ]
 })
 export class ComponentsModule {}

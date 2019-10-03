@@ -1,21 +1,15 @@
 
+
+<!-- Row -->
 <div class="row">
-	<div class="col-md-6 col-xlg-5" *ngFor="let bestmovie of BestMovie$" >
-		<div class="card" >
-			<div class="card-body" routerLink = "/component/describe/{{ bestmovie.id }}" >
-				<h3 class="card-title">{{bestmovie.title}}</h3>
-				<h6 class="card-subtitle">{{bestmovie.overview}}</h6>
-				<ngb-carousel >
-					<ng-template ngbSlide>
-						<img src="https://image.tmdb.org/t/p/w500/{{ bestmovie.poster_path }}" alt="Random first slide">
-						<div class="carousel-caption">
-							<h3 class="text-white font-bold">{{bestmovie.title}}</h3>
-						</div>
-					</ng-template>
-				</ngb-carousel>
-			</div>
-		</div>
-	</div>
-	
-	
+    
+        <div class="col-sm-4 col-6 test3"  *ngFor="let bestmovie of BestMovie$" >
+            <div  class="card"  routerLink = "/component/describe/{{ bestmovie.id }}">
+                <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ bestmovie.poster_path }}" alt="Card image cap">
+               
+            </div>
+        </div>
+   
 </div>
+<!-- End Row -->
+

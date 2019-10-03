@@ -1,9 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { FormControl, Validators } from '@angular/forms';
+import { PeopleService } from './people.service';
+import { People } from './people.model';
 
 @Component({
   selector: 'app-ngbd-rating',
-  templateUrl: './rating.component.html',
+  templateUrl: './people.component.html',
   styles: [
     `
       .star {
@@ -31,13 +33,14 @@ import { FormControl, Validators } from '@angular/forms';
     `
   ]
 })
-export class NgbdratingBasicComponent {
+export class NgbdpeopleBasicComponent implements OnInit {
   currentRate = 8;
   currentRate2 = 2;
   selected = 0;
   hovered = 0;
   readonly = false;
-  // for form integration
+  peoples$: People[];
+   // for form integration
   ctrl = new FormControl(null, Validators.required);
 
   toggle() {
@@ -47,4 +50,19 @@ export class NgbdratingBasicComponent {
       this.ctrl.disable();
     }
   }
+
+  constructor (private peopleService: PeopleService){}
+  ngOnInit(): void {
+    this.getPeopleProfile();
+  }
+
+  getPeopleProfile() {
+    this.peopleService.getTrendings().subscribe(
+        data => {
+          this.peoples$ = data.results;
+          console.log("ici "+this.peoples$[1].vote_average);
+         }
+    );
+  }
 }
+

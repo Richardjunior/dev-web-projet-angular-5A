@@ -44,8 +44,8 @@ export const ROUTES: RouteInfo[] = [
   },
 
   {
-    path: '/component/rating',
-    title: 'Comments',
+    path: '/component/people',
+    title: 'Peoples',
     icon: 'mdi mdi-bandcamp',
     class: '',
     label: '',

@@ -2,7 +2,7 @@ import { Routes } from '@angular/router';
 
 import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { BestMovieBasicComponent } from './best-movie/best-movie.component';
-import { NgbdratingBasicComponent } from './rating/rating.component';
+import { NgbdpeopleBasicComponent } from './people/people.component';
 import { DescribeComponent } from './describe/describe.component';
 import { CardsComponent } from './card/card.component';
 
@@ -35,14 +35,14 @@ export const ComponentsRoutes: Routes = [
         }
       },
       {
-        path: 'rating',
-        component: NgbdratingBasicComponent,
+        path: 'people',
+        component: NgbdpeopleBasicComponent,
         data: {
-          title: 'Comments',
+          title: 'Peoples',
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
-            { title: 'Comments' },
-            { title: 'Comments' }
+            { title: 'Peoples' },
+            { title: 'Peoples' }
           ]
         }
       },
