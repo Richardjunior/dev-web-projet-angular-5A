@@ -12,7 +12,7 @@ import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 
 import { DescribeComponent } from './describe/describe.component';
 
-import { CardsComponent } from './card/card.component';
+import { GenresComponent } from './genre/genre.component';
 import { NgbdpeopleBasicComponent } from './people/people.component';
 
 @NgModule({
@@ -28,7 +28,7 @@ import { NgbdpeopleBasicComponent } from './people/people.component';
     BestMovieBasicComponent,
     NgbdpeopleBasicComponent,
     DescribeComponent,
-    CardsComponent
+    GenresComponent
 
   ]
 })

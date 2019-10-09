@@ -60,7 +60,6 @@ export class NgbdpeopleBasicComponent implements OnInit {
     this.peopleService.getTrendings().subscribe(
         data => {
           this.peoples$ = data.results;
-          console.log("ici "+this.peoples$[1].vote_average);
          }
     );
   }

@@ -4,21 +4,21 @@ import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
 import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 import { NgbdpeopleBasicComponent } from './people/people.component';
 import { DescribeComponent } from './describe/describe.component';
-import { CardsComponent } from './card/card.component';
+import { GenresComponent } from './genre/genre.component';
 
 export const ComponentsRoutes: Routes = [
   {
     path: '',
     children: [
       {
-        path: 'cards',
-        component: CardsComponent,
+        path: 'genres',
+        component: GenresComponent,
         data: {
-          title: 'Cards',
+          title: 'Genres',
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
             { title: 'ngComponent' },
-            { title: 'Cards' }
+            { title: 'Genres' }
           ]
         }
       },

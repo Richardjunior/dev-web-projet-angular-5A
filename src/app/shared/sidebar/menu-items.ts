@@ -65,8 +65,8 @@ export const ROUTES: RouteInfo[] = [
   },*/
 
    {
-    path: '/component/cards',
-    title: 'Card',
+    path: '/component/genres',
+    title: 'Genres',
     icon: 'mdi mdi-blur-radial',
     class: '',
     label: '',
