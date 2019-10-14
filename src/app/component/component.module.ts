@@ -7,7 +7,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { ComponentsRoutes } from './component.routing';
 
-import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
+import { DescribePeopleComponent } from './describe-people/describe-people.component';
 import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 
 import { DescribeComponent } from './describe/describe.component';
@@ -24,7 +24,7 @@ import { NgbdpeopleBasicComponent } from './people/people.component';
     NgbModule,
   ],
   declarations: [
-    NgbdAccordionBasicComponent,
+    DescribePeopleComponent,
     BestMovieBasicComponent,
     NgbdpeopleBasicComponent,
     DescribeComponent,

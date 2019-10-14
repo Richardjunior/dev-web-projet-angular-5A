@@ -34,7 +34,13 @@ export class DescribeComponent implements OnInit {
         this.getVideoOfMovie();
         this.getDescribeMovie();
    }
-
+   getIdMovie() {
+    this.route.paramMap.pipe(
+      map(params => {
+          this.movieId = parseInt(params.get('id'), 10);
+        })
+    ).subscribe();
+  }
    getDescribeMovie() {
     this.describeService.getDescribeMovie(this.movieId).subscribe(
       data => {
@@ -54,11 +60,5 @@ export class DescribeComponent implements OnInit {
     }
   );
  }
-  getIdMovie() {
-    this.route.paramMap.pipe(
-      map(params => {
-          this.movieId = parseInt(params.get('id'), 10);
-        })
-    ).subscribe();
-  }
+  
 }

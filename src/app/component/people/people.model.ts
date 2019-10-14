@@ -12,10 +12,25 @@ export interface  People {
     original_name: string;
     name: string;
     origin_country: Array<string>;
+    known_for: Array<People>;
+    known_for_department: string;
 
 }
 
 
 export interface PeopleResponse {
     results: Array<People>;
+}
+
+export interface Fnownfor {
+    profile_path: string;
+
+}
+
+export interface DetailsPeople{
+    birthday: string;
+    id: number;
+    place_of_birth: string;
+    biography: string;
+
 }

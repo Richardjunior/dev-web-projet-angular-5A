@@ -1,6 +1,6 @@
 import { Routes } from '@angular/router';
 
-import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
+import { DescribePeopleComponent } from './describe-people/describe-people.component';
 import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 import { NgbdpeopleBasicComponent } from './people/people.component';
 import { DescribeComponent } from './describe/describe.component';
@@ -17,8 +17,8 @@ export const ComponentsRoutes: Routes = [
           title: 'Genres',
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
-            { title: 'ngComponent' },
-            { title: 'Genres' }
+            { title: 'Genres' },
+            { title: 'List by Genre' }
           ]
         }
       },
@@ -30,7 +30,7 @@ export const ComponentsRoutes: Routes = [
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
             { title: 'Best Movies' },
-            { title: 'Best Movies' }
+            { title: 'List of Movies' }
           ]
         }
       },
@@ -42,7 +42,19 @@ export const ComponentsRoutes: Routes = [
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
             { title: 'Peoples' },
-            { title: 'Peoples' }
+            { title: 'List of Peoples' }
+          ]
+        }
+      },
+      {
+        path: 'describe-people/:id',
+        component: DescribePeopleComponent,
+        data: {
+          title: 'Describe People',
+          urls: [
+            { title: 'UlriFlix', url: '/dashboard' },
+            { title: 'Describe People' },
+            { title: 'People' }
           ]
         }
       },
