@@ -10,8 +10,8 @@
 <!-- Row -->
 <div class="row">
     
-        <div class="col-sm-2 col-4 test3"   *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
-            <div  class="card"  routerLink = "/component/describe/{{ trending.id }}">
+        <div class="col-sm-2 col-3 test3"   *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
+            <div  class="card effet-curser-image-1"  routerLink = "/component/describe/{{ trending.id }}">
                 <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ trending.poster_path }}" alt="Card image cap">
                
             </div>

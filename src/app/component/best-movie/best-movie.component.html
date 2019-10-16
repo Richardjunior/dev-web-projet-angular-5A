@@ -3,9 +3,9 @@
 <!-- Row -->
 <div class="row">
     
-        <div class="col-sm-4 col-6 test3"  *ngFor="let bestmovie of BestMovie$" >
-            <div  class="card"  routerLink = "/component/describe/{{ bestmovie.id }}">
-                <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ bestmovie.poster_path }}" alt="Card image cap">
+        <div class="col-sm-2 col-3 test3"  *ngFor="let bestmovie of BestMovie$" >
+            <div  class="card effet-curser-image-1"  routerLink = "/component/describe/{{ bestmovie.id }}">
+                <img class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ bestmovie.poster_path }}" alt="Card image cap">
                
             </div>
         </div>

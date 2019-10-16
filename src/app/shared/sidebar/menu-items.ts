@@ -24,10 +24,11 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
 
-  {
-    path: '/component/people',
-    title: 'Peoples',
-    icon: 'mdi mdi-bandcamp',
+
+   {
+    path: '/component/genres',
+    title: 'Genres',
+    icon: 'mdi mdi-blur-radial',
     class: '',
     label: '',
     labelClass: '',
@@ -35,10 +36,10 @@ export const ROUTES: RouteInfo[] = [
     submenu: []
   },
 
-   {
-    path: '/component/genres',
-    title: 'Genres',
-    icon: 'mdi mdi-blur-radial',
+  {
+    path: '/component/people',
+    title: 'People',
+    icon: 'mdi mdi-bandcamp',
     class: '',
     label: '',
     labelClass: '',

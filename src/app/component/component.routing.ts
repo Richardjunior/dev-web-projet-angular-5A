@@ -38,11 +38,11 @@ export const ComponentsRoutes: Routes = [
         path: 'people',
         component: NgbdpeopleBasicComponent,
         data: {
-          title: 'Peoples',
+          title: 'People',
           urls: [
             { title: 'UlriFlix', url: '/dashboard' },
-            { title: 'Peoples' },
-            { title: 'List of Peoples' }
+            { title: 'People' },
+            { title: 'List of People' }
           ]
         }
       },
