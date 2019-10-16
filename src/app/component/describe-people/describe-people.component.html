@@ -12,38 +12,20 @@
 					</div>
 					<div class="col-sm-8">
 						<p>{{detailOfPeople$.biography}}</p>
+						<h2>List of Movie</h2>
+						<div class="row">
+							<div class="col-sm-2 col-4  test3" *ngFor="let movie of movieOfPeople$">
+								<!-- Card -->
+								 <div  class="card"  routerLink = "/component/describe/{{ movie.id }}">
+									<img style="width: 200px; height: 100px;" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card image cap">
+								</div>
+								<!-- Card -->
+							</div>
+						</div>
 					</div>
+					
 				</div>
 			</div>
 		</div>
-	</div>
-</div>
-
-<div class="row" >
-	<div class="col-12"  >
-		  <ngb-accordion #acc="ngbAccordion" activeIds="ngb-panel-0" >                               
-		         	 <ngb-panel>
-		            		<ng-template ngbPanelTitle>
-		               		  <span>&#9733; <b>List of Movie</b> Click Here &#9733;</span>
-			               </ng-template>
-			               <ng-template ngbPanelContent>
-							<div class="row">
-								<div class="col-12">
-									<!-- Row -->
-									<div class="row">
-										<!-- column -->
-										<div class="col-sm-2 col-4  test3" *ngFor="let movie of movieOfPeople$">
-											<!-- Card -->
-											<div class="card" >
-												<img src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card image cap">
-											</div>
-											<!-- Card -->
-										</div>
-									</div>      
-								</div>
-							</div>
-				        	</ng-template>
-			        	 </ngb-panel>
-			</ngb-accordion>
 	</div>
 </div>
