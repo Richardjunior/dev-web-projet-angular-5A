@@ -14,6 +14,9 @@ import { DescribeComponent } from './describe/describe.component';
 
 import { GenresComponent } from './genre/genre.component';
 import { NgbdpeopleBasicComponent } from './people/people.component';
+import { PeopleFilterPipe } from './people-filter.pipe';
+import { BestmovieFilterPipe } from './bestmovie-filter.pipe';
+import { GenreActionFilterPipe, GenreAdventureFilterPipe, GenretabHorrorFilterPipe, GenretabThrillerFilterPipe } from './genreaction-filter.pipe';
 
 @NgModule({
   imports: [
@@ -22,14 +25,30 @@ import { NgbdpeopleBasicComponent } from './people/people.component';
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
+  
   ],
   declarations: [
     DescribePeopleComponent,
     BestMovieBasicComponent,
     NgbdpeopleBasicComponent,
     DescribeComponent,
-    GenresComponent
+    GenresComponent,
+    PeopleFilterPipe,
+    BestmovieFilterPipe,
+    GenreActionFilterPipe,
+    GenreAdventureFilterPipe,
+    GenretabHorrorFilterPipe,
+    GenretabThrillerFilterPipe
 
-  ]
+  ],
+  exports: [
+    PeopleFilterPipe,
+    BestmovieFilterPipe,
+    GenreActionFilterPipe,
+    GenreAdventureFilterPipe,
+    GenretabHorrorFilterPipe,
+    GenretabThrillerFilterPipe
+
+  ],
 })
 export class ComponentsModule {}

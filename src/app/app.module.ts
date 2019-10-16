@@ -34,6 +34,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     NavigationComponent,
     BreadcrumbComponent,
     SidebarComponent,
+    
+    
   ],
   imports: [
     CommonModule,
@@ -43,13 +45,18 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
     HttpClientModule,
     NgbModule.forRoot(),
     RouterModule.forRoot(Approutes),
-    PerfectScrollbarModule
+    PerfectScrollbarModule,
+    
+    
   ],
   providers: [
     {
       provide: PERFECT_SCROLLBAR_CONFIG,
       useValue: DEFAULT_PERFECT_SCROLLBAR_CONFIG
     }
+  ],
+  exports: [
+    
   ],
   bootstrap: [AppComponent]
 })
