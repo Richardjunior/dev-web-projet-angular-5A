@@ -11,10 +11,12 @@ import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { DescribeService } from './describe.service';
 import { map } from 'rxjs/operators';
+import { DomSanitizer } from '@angular/platform-browser';
 let DescribeComponent = class DescribeComponent {
-    constructor(route, describeService) {
+    constructor(route, describeService, sanitizer) {
         this.route = route;
         this.describeService = describeService;
+        this.sanitizer = sanitizer;
         this.currentJustify = 'start';
         this.currentOrientation = 'horizontal';
     }
@@ -24,15 +26,28 @@ let DescribeComponent = class DescribeComponent {
         }
     }
     ngOnInit() {
+        this.getIdMovie();
+        this.getVideoOfMovie();
+        this.getDescribeMovie();
+    }
+    getIdMovie() {
         this.route.paramMap.pipe(map(params => {
             this.movieId = parseInt(params.get('id'), 10);
-            this.id = this.movieId;
         })).subscribe();
-        this.describeService.getDescribeMovie(320288).subscribe(data => {
+    }
+    getDescribeMovie() {
+        this.describeService.getDescribeMovie(this.movieId).subscribe(data => {
             this.describeMovie$ = data;
         });
-        this.describeService.getVideoOfMovie(320288).subscribe(data => {
+    }
+    getVideoOfMovie() {
+        this.describeService.getVideoOfMovie(this.movieId).subscribe(data => {
             this.MovieVideo$ = data.results;
+            this.keyMovie = data.results[0].key;
+            this.youtubeUrl = 'https://www.youtube.com/watch?v=' + this.keyMovie;
+            this.youtubeUrl = this.youtubeUrl.replace("watch?v=", "embed/");
+            this.url = this.sanitizer.bypassSecurityTrustResourceUrl(this.youtubeUrl);
+            console.log(this.youtubeUrl);
         });
     }
 };
@@ -41,7 +56,7 @@ DescribeComponent = __decorate([
         selector: 'app-ngbd-tabs',
         templateUrl: './describe.component.html'
     }),
-    __metadata("design:paramtypes", [ActivatedRoute, DescribeService])
+    __metadata("design:paramtypes", [ActivatedRoute, DescribeService, DomSanitizer])
 ], DescribeComponent);
 export { DescribeComponent };
 //# sourceMappingURL=describe.component.js.map

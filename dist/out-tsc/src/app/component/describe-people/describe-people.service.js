@@ -9,23 +9,18 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-let TrendingService = class TrendingService {
-    constructor(_http) {
+import { PeopleService } from '../people/people.service';
+let DescribePeopleService = class DescribePeopleService {
+    constructor(_http, peopleService) {
         this._http = _http;
-        this.apiUrlAllTrending = 'https://api.themoviedb.org/3/trending/movie/day?api_key=089e077279af9352976ba2161c971b70&';
-    }
-    getTrendings() {
-        return this._http.get(this.apiUrlAllTrending);
-    }
-    getTrendingsByGenre(id) {
-        return this._http.get(this.apiUrlAllTrending);
+        this.peopleService = peopleService;
     }
 };
-TrendingService = __decorate([
+DescribePeopleService = __decorate([
     Injectable({
         providedIn: 'root'
     }),
-    __metadata("design:paramtypes", [HttpClient])
-], TrendingService);
-export { TrendingService };
-//# sourceMappingURL=trending.service.js.map
+    __metadata("design:paramtypes", [HttpClient, PeopleService])
+], DescribePeopleService);
+export { DescribePeopleService };
+//# sourceMappingURL=describe-people.service.js.map

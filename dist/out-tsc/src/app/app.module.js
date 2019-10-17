@@ -36,7 +36,7 @@ AppModule = __decorate([
             FullComponent,
             NavigationComponent,
             BreadcrumbComponent,
-            SidebarComponent
+            SidebarComponent,
         ],
         imports: [
             CommonModule,

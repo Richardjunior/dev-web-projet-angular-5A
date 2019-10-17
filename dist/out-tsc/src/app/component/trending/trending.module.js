@@ -8,7 +8,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { StarterComponent } from './trending.component';
+import { FilmFilterPipe } from '../film-filter.pipe';
+import { TrendingComponent } from './trending.component';
 const routes = [
     {
         path: '',
@@ -19,17 +20,26 @@ const routes = [
                 { title: 'Home' }
             ]
         },
-        component: StarterComponent
+        component: TrendingComponent
     }
 ];
-let StarterModule = class StarterModule {
+let TrendingModule = class TrendingModule {
 };
-StarterModule = __decorate([
+TrendingModule = __decorate([
     NgModule({
-        imports: [FormsModule, CommonModule, RouterModule.forChild(routes)],
-        declarations: [StarterComponent,
-            StarterComponent]
+        imports: [
+            FormsModule,
+            CommonModule,
+            RouterModule.forChild(routes),
+        ],
+        declarations: [
+            TrendingComponent,
+            FilmFilterPipe
+        ],
+        exports: [
+            FilmFilterPipe,
+        ]
     })
-], StarterModule);
-export { StarterModule };
+], TrendingModule);
+export { TrendingModule };
 //# sourceMappingURL=trending.module.js.map

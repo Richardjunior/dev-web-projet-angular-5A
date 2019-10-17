@@ -35,10 +35,11 @@ html
 .page-wrapper {
   background: $bodycolor;
   padding-bottom: 60px;
-  height: calc(100vh - 64px); 
+  height: calc(100vh - 10px); 
   position: relative;
     overflow: auto;
    margin-left: 150px !important;
+  z-index: 20;
 }
 .page-titles .breadcrumb {
   font-size: 10px !important;
@@ -63,7 +64,10 @@ html
   .topbar .top-navbar .navbar-header {
     background-color: #0E0F11 !important;
   }
+  
 }
+
+
 @media (max-width: 720 px) 
 {
   .page-wrapper
@@ -73,6 +77,7 @@ html
   .topbar .top-navbar .navbar-header {
     background-color: #0E0F11 !important;
   }
+
 }
 
 
@@ -250,7 +255,8 @@ html
 *******************/
 
 .page-titles {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    margin-top: 05px;
     padding: 0px;
     h3 {
         margin-bottom: 0px;
@@ -318,7 +324,7 @@ html
   top: 0px;
   padding-bottom: 20px;
   height: 100%;
-  box-shadow: 5px 1px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 5px 1px 40px rgba(0, 0,0, 0.1);
   transition: all 0.3s ease;
   .rpanel-title {
     display: block;
@@ -426,6 +432,7 @@ html
 	transform: scale(1.3);
   overflow: visible;
   z-index: 10000000000;
+  box-shadow: -5px 2px 5px 1px rgba(255, 0, 0, 0.6); 
   }
 
 .overlay
@@ -436,10 +443,11 @@ html
   width: 100%;
   transition: .5s ease;
   opacity:0;
-  color:#FF0000;
+  color:#FFf;
   font-size: 20px;
   padding: 10px;
   text-align: center; 
+ 
 
 }
 .card-acteur
@@ -447,11 +455,27 @@ html
   cursor: pointer;
 }
 
+.d-inline
+{
+  color: #FFF;
+}
 .card-acteur:hover .overlay {
   opacity: 1;
 }
+.topbar .top-navbar
+{
+  display: none !important;
+}
+.card-body
+{
+  background-color: #000;
+}
 
-
+.left-sidebar
+{
+    padding-top:0px !important;
+    z-index: 0 !important;
+}
 
 
 .sidebar-nav ul li a {
@@ -474,6 +498,19 @@ html
   font-size: 15px !important;
   color:red;
 }
+
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link
+{
+  background-color: #000 !important;
+  color: #fff;
+  border-color:red;
+}
+.nav-tabs {
+  border-bottom: 1px solid red !important;
+}
+
+
 
 .card-inverse .card-bodyquote .blockquote-footer,
 .card-inverse .card-link,

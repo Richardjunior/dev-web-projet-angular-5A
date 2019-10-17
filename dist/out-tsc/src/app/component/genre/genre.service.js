@@ -9,7 +9,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-let TrendingService = class TrendingService {
+let GenreService = class GenreService {
     constructor(_http) {
         this._http = _http;
         this.apiUrlAllTrending = 'https://api.themoviedb.org/3/trending/movie/day?api_key=089e077279af9352976ba2161c971b70&';
@@ -17,15 +17,12 @@ let TrendingService = class TrendingService {
     getTrendings() {
         return this._http.get(this.apiUrlAllTrending);
     }
-    getTrendingsByGenre(id) {
-        return this._http.get(this.apiUrlAllTrending);
-    }
 };
-TrendingService = __decorate([
+GenreService = __decorate([
     Injectable({
         providedIn: 'root'
     }),
     __metadata("design:paramtypes", [HttpClient])
-], TrendingService);
-export { TrendingService };
-//# sourceMappingURL=trending.service.js.map
+], GenreService);
+export { GenreService };
+//# sourceMappingURL=genre.service.js.map

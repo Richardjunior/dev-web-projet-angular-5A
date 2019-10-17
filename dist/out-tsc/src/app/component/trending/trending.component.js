@@ -9,23 +9,26 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 import { Component } from '@angular/core';
 import { TrendingService } from './trending.service';
-let StarterComponent = class StarterComponent {
-    constructor(starterService) {
-        this.starterService = starterService;
+let TrendingComponent = class TrendingComponent {
+    constructor(trendingService) {
+        this.trendingService = trendingService;
         this.subtitle = 'This is some text within a card block.';
     }
     ngOnInit() {
-        return this.starterService.getTrendings().subscribe(data => {
-            this.starters$ = data.results;
+        return this.trendingService.getTrendings().subscribe(data => {
+            this.trendings$ = data.results;
         });
     }
+    sortByGenre() {
+        this.trendingByGenres$ = this.trendings$;
+    }
 };
-StarterComponent = __decorate([
+TrendingComponent = __decorate([
     Component({
         selector: 'app-starter',
         templateUrl: './trending.component.html',
     }),
     __metadata("design:paramtypes", [TrendingService])
-], StarterComponent);
-export { StarterComponent };
+], TrendingComponent);
+export { TrendingComponent };
 //# sourceMappingURL=trending.component.js.map

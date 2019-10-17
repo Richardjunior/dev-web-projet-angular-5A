@@ -1,16 +1,6 @@
 export const ROUTES = [
-    /* {
-       path: '',
-       title: 'Personal',
-       icon: '',
-       class: 'nav-small-cap',
-       label: '',
-       labelClass: '',
-       extralink: true,
-       submenu: []
-     },*/
     {
-        path: '/starter',
+        path: '/accueil',
         title: 'Home',
         icon: 'mdi mdi-gauge',
         class: '',
@@ -19,18 +9,8 @@ export const ROUTES = [
         extralink: false,
         submenu: []
     },
-    /* {
-       path: '',
-       title: 'UI Components',
-       icon: '',
-       class: 'nav-small-cap',
-       label: '',
-       labelClass: '',
-       extralink: true,
-       submenu: []
-     },*/
     {
-        path: '/component/carousel',
+        path: '/component/best-movie',
         title: 'Best Movies',
         icon: 'mdi mdi-view-carousel',
         class: '',
@@ -40,9 +20,9 @@ export const ROUTES = [
         submenu: []
     },
     {
-        path: '/component/rating',
-        title: 'Comments',
-        icon: 'mdi mdi-bandcamp',
+        path: '/component/genres',
+        title: 'Genres',
+        icon: 'mdi mdi-blur-radial',
         class: '',
         label: '',
         labelClass: '',
@@ -50,14 +30,14 @@ export const ROUTES = [
         submenu: []
     },
     {
-        path: '/component/tabs',
-        title: 'Others',
-        icon: 'mdi mdi-sort-variant',
+        path: '/component/people',
+        title: 'People',
+        icon: 'mdi mdi-bandcamp',
         class: '',
         label: '',
         labelClass: '',
         extralink: false,
         submenu: []
-    },
+    }
 ];
 //# sourceMappingURL=menu-items.js.map

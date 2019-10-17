@@ -2,22 +2,22 @@
 		<div class="col-12">
 			<div class="card" *ngFor="let actor of people$ ">
 				<div class="card-body">
-					<h3 class="card-title">{{actor.name}}</h3>
+					<h5 class="card-title" style="color: #fff;">{{actor.name}}</h5>
 					<h6 class="card-subtitle"> {{actor.known_for_department}}</h6>
 	
 					<div class="row">
-						<div class="col-sm-4">
+						<div class="col-md-4 col-12">
 							<img class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ actor.profile_path }}"
 								alt="Card image cap">
 						</div>
-						<div class="col-sm-8">
-							<p>{{detailOfPeople$.biography}}</p>
-							<h2>List of Movie</h2>
+						<div class="col-sm-8 col-12">
+							<p style="max-height:400px; overflow-y: scroll;">{{detailOfPeople$.biography}}</p>
+							<h6 style="color:#fff;">List of Movie</h6>
 							<div class="row">
 								<div class="col-sm-2 col-4  test3" *ngFor="let movie of movieOfPeople$">
 									<!-- Card -->
-									 <div  class="card"  routerLink = "/component/describe/{{ movie.id }}">
-										<img style="width: 200px; height: 100px;" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card image cap">
+									 <div  class="card effet-curser-image-1 "  routerLink = "/component/describe/{{ movie.id }}">
+										<img style="width:100%; height: 100%;" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card image cap">
 									</div>
 									<!-- Card -->
 								</div>

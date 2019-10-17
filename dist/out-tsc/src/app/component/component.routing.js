@@ -1,44 +1,57 @@
-import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
-import { NgbdratingBasicComponent } from './rating/rating.component';
+import { DescribePeopleComponent } from './describe-people/describe-people.component';
+import { BestMovieBasicComponent } from './best-movie/best-movie.component';
+import { NgbdpeopleBasicComponent } from './people/people.component';
 import { DescribeComponent } from './describe/describe.component';
-import { CardsComponent } from './card/card.component';
+import { GenresComponent } from './genre/genre.component';
 export const ComponentsRoutes = [
     {
         path: '',
         children: [
             {
-                path: 'cards',
-                component: CardsComponent,
+                path: 'genres',
+                component: GenresComponent,
                 data: {
-                    title: 'Cards',
+                    title: 'Genres',
                     urls: [
                         { title: 'UlriFlix', url: '/dashboard' },
-                        { title: 'ngComponent' },
-                        { title: 'Cards' }
+                        { title: 'Genres' },
+                        { title: 'List by Genre' }
                     ]
                 }
             },
             {
-                path: 'carousel',
-                component: NgbdCarouselBasicComponent,
+                path: 'best-movie',
+                component: BestMovieBasicComponent,
                 data: {
                     title: 'Best Movies',
                     urls: [
                         { title: 'UlriFlix', url: '/dashboard' },
                         { title: 'Best Movies' },
-                        { title: 'Best Movies' }
+                        { title: 'List of Movies' }
                     ]
                 }
             },
             {
-                path: 'rating',
-                component: NgbdratingBasicComponent,
+                path: 'people',
+                component: NgbdpeopleBasicComponent,
                 data: {
-                    title: 'Comments',
+                    title: 'People',
                     urls: [
                         { title: 'UlriFlix', url: '/dashboard' },
-                        { title: 'Comments' },
-                        { title: 'Comments' }
+                        { title: 'People' },
+                        { title: 'List of People' }
+                    ]
+                }
+            },
+            {
+                path: 'describe-people/:id',
+                component: DescribePeopleComponent,
+                data: {
+                    title: 'Describe People',
+                    urls: [
+                        { title: 'UlriFlix', url: '/dashboard' },
+                        { title: 'Describe People' },
+                        { title: 'People' }
                     ]
                 }
             },

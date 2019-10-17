@@ -10,11 +10,11 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ComponentsRoutes } from './component.routing';
-import { NgbdAccordionBasicComponent } from './accordion/accordion.component';
-import { NgbdCarouselBasicComponent } from './carousel/carousel.component';
-import { NgbdratingBasicComponent } from './rating/rating.component';
+import { DescribePeopleComponent } from './describe-people/describe-people.component';
+import { BestMovieBasicComponent } from './best-movie/best-movie.component';
 import { DescribeComponent } from './describe/describe.component';
-import { CardsComponent } from './card/card.component';
+import { GenresComponent } from './genre/genre.component';
+import { NgbdpeopleBasicComponent } from './people/people.component';
 let ComponentsModule = class ComponentsModule {
 };
 ComponentsModule = __decorate([
@@ -24,14 +24,14 @@ ComponentsModule = __decorate([
             RouterModule.forChild(ComponentsRoutes),
             FormsModule,
             ReactiveFormsModule,
-            NgbModule
+            NgbModule,
         ],
         declarations: [
-            NgbdAccordionBasicComponent,
-            NgbdCarouselBasicComponent,
-            NgbdratingBasicComponent,
+            DescribePeopleComponent,
+            BestMovieBasicComponent,
+            NgbdpeopleBasicComponent,
             DescribeComponent,
-            CardsComponent,
+            GenresComponent
         ]
     })
 ], ComponentsModule);
