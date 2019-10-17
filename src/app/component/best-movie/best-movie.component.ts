@@ -32,7 +32,6 @@ export class BestMovieBasicComponent implements OnInit {
   ngOnInit() {
     this.getIdMovie();
     this.getBestMovies();
-    this.getBestMovies();
   }
 
 getBestMovies() {
