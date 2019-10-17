@@ -1,10 +1,14 @@
+<div class="col-sm-3 col-8" >
+    <input type="text" class="form-search" placeholder="Search By Name" 
+            style="width:90%" [(ngModel)]="searchTerm" /> 
+ </div>
 <div class="row">
     <div class="col-12">
         <h5 class="d-inline">Action</h5>
         <!-- Row -->
         <div class="row">
             <!-- column -->
-            <div class="col-sm-2 col-3  test3" *ngFor="let tabAction of tabAction$" >
+            <div class="col-sm-2 col-3  test3" *ngFor="let tabAction of tabAction$ | filmFilter2:searchTerm" >
                 <!-- Card -->
                 <div class="card effet-curser-image-1" >
                     <img class="test1 card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ tabAction.poster_path }}" alt="Card image cap">
@@ -21,7 +25,7 @@
         <!-- Row -->
         <div class="row">
             <!-- column -->
-            <div class="col-sm-2 col-3 test3" *ngFor="let tabThriller of tabThriller$" >
+            <div class="col-sm-2 col-3 test3" *ngFor="let tabThriller of tabThriller$ | filmFilter4:searchTerm" >
                 <!-- Card -->
                 <div class="card effet-curser-image-1" >
                     <img class="test1 card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ tabThriller.poster_path }}"alt="Card image cap">
@@ -39,7 +43,7 @@
         <!-- Row -->
         <div class="row">
             <!-- column -->
-            <div class="col-sm-2 col-3  test3" *ngFor="let tabAdventure of tabAdventure$" >
+            <div class="col-sm-2 col-3  test3" *ngFor="let tabAdventure of tabAdventure$ | filmFilter3:searchTerm" >
                 <!-- Card -->
                 <div class="card effet-curser-image-1" >
                     <img class="test1 card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ tabAdventure.poster_path }}" alt="Card image cap">
@@ -57,7 +61,7 @@
         <!-- Row -->
         <div class="row">
             <!-- column -->
-            <div class="col-sm-2 col-3 test3" *ngFor="let tabHorror of tabHorror$" >
+            <div class="col-sm-2 col-3 test3" *ngFor="let tabHorror of tabHorror$ | filmFilter5:searchTerm" >
                 <!-- Card -->
                 <div class="card effet-curser-image-1" >
                     <img class="test1 card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ tabHorror.poster_path }}"alt="Card image cap">

@@ -6,7 +6,6 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { FilmFilterPipe } from '../film-filter.pipe';
 import { TrendingComponent } from './trending.component';
-
 const routes: Routes = [
   {
     path: '',
@@ -29,10 +28,12 @@ const routes: Routes = [
   ],
   declarations: [
     TrendingComponent,
-    FilmFilterPipe
+    FilmFilterPipe,
+    
     ],
     exports: [
       FilmFilterPipe,
+      
     ]
 })
 export class TrendingModule {}

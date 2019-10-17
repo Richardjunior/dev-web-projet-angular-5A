@@ -1,6 +1,9 @@
-
+    <div class="col-sm-3 col-8" >
+        <input type="text" class="form-search" placeholder="Search By Name" 
+                style="width:90%" [(ngModel)]="searchTerm" /> 
+     </div>
 <div class="row">
-    <div class="col-md-2 col-3 test3"  *ngFor="let people of peoples$ " >
+    <div class="col-md-2 col-3 test3"  *ngFor="let people of peoples$ | PeopleFilter:searchTerm " >
         <div class="card effet-curser-image-1" routerLink = "/component/describe-people/{{ people.id }}">
             <div class="card-acteur">
                 <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ people.profile_path }}" alt="Card image cap">
