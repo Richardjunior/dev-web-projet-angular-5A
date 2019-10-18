@@ -7,14 +7,14 @@
 	
 					<div class="row">
 						<div class="col-md-4 col-12">
-							<img class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ actor.profile_path }}"
+							<img class="img-responsive" src="https://image.tmdb.org/t/p/w500/{{ actor.profile_path }}"
 								alt="Card image cap">
 						</div>
 						<div class="col-sm-8 col-12">
-							<p style="max-height:400px; overflow-y: scroll;">{{detailOfPeople$.biography}}</p>
+							<p style="max-height:400px; overflow-y: scroll;font-size:12px;">{{detailOfPeople$.biography}}</p>
 							<h6 style="color:#fff;">List of Movie</h6>
 							<div class="row">
-								<div class="col-sm-2 col-4  test3" *ngFor="let movie of movieOfPeople$">
+								<div class="col-sm-2 col-4  style-card" *ngFor="let movie of movieOfPeople$">
 									<!-- Card -->
 									 <div  class="card effet-curser-image-1 "  routerLink = "/component/describe/{{ movie.id }}">
 										<img style="width:100%; height: 100%;" src="https://image.tmdb.org/t/p/w500/{{ movie.poster_path }}" alt="Card image cap">

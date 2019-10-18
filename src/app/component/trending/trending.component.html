@@ -2,7 +2,7 @@
  <div class="row form-group"> 
     <div class="col-sm-9 col-4"></div>
     <div class="col-sm-3 col-8" >
-        <input type="text" class="form-search" placeholder="Search By Nameeeee" 
+        <input type="text" class="form-search" placeholder="Search By Name" 
                 style="width:90%" [(ngModel)]="searchTerm" /> 
      </div>
 </div>  
@@ -10,7 +10,7 @@
 <!-- Row -->
 <div class="row">
     
-        <div class="col-sm-2 col-3 test3"   *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
+        <div class="col-sm-2 col-3 style-card"   *ngFor="let trending of trendings$ | filmFilter:searchTerm" >
             <div  class="card effet-curser-image-1"  routerLink = "/component/describe/{{ trending.id }}">
                 <img  class="test1 img-responsive" src="https://image.tmdb.org/t/p/w500/{{ trending.poster_path }}" alt="Card image cap">
                
