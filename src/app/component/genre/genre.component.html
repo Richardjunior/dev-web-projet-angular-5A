@@ -13,7 +13,7 @@
             <!-- column -->
             <div class="col-sm-2 col-3  style-card" *ngFor="let tabAction of tabAction$ | filmFilter2:searchTerm" >
                 <!-- Card -->
-                <div class="card effet-curser-image-1" >
+                <div class="card effet-curser-image-1" routerLink = "/component/describe/{{ tabAction.id }}" >
                     <img class=" card-img-top img-responsive" src="https://image.tmdb.org/t/p/w500/{{ tabAction.poster_path }}" alt="Card image cap">
                 </div>
                 <!-- Card -->

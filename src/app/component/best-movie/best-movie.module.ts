@@ -15,8 +15,5 @@ export interface  BestMovie {
 }
 
 export interface BestMovieResponse {
-   // page: number;
     results: Array<BestMovie>;
-    // total_pages: number;
-   // total_results: number;
 }
